@@ -10,12 +10,13 @@ subprocess.run(["diskutil", "list"])
 elif platform.system == 'Windows':
 subprocess.run(["wmic", "list", "diskdrive", "brief"], shell=True)
 elif platform.system == 'NetBSD':
-subprocess.run(["drvctl", -l"])
+subprocess.run(["drvctl", "-l"])
 # psst, slide me a push request in blk.py
 elif platform.system == 'FreeBSD':
-subprocess.run(["sysctl", hw.disknames"])
+subprocess.run(["sysctl", "hw.disknames"])
 # why? I wanna support all Unix systems
-elif platform.sysyem == 'OpenBSD':
-subprocess.run(["geom", "disk", "list""])
+elif platform.system == 'OpenBSD':
+subprocess.run(["geom", "disk", "list"])
 # don't say to support more
 # I just like to show this disk drive
+# fixed the syntax errors
