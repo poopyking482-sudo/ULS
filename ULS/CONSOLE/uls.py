@@ -4,7 +4,7 @@ import os
 # link together by pointing python/PYPY to COMMANDS
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from commands import flags
+from COMMANDS import flags
 
 def main():
     args = sys.argv[1:]
