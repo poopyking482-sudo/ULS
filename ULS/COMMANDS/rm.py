@@ -2,7 +2,7 @@ import shutil
 
 def run(args):
     if len(args) < 2:
-        print("error: please specify which subdirectory")
+        print("error: please specify subdirectory")
         return
     target_dir = args[1]
     try:
